@@ -1,14 +1,15 @@
 todo_list = []
 
 while True:
+    print("Your current list is", todo_list)
     answer = input("Do you want to add an item? (y/n): ")
-    if answer == "N" or answer == "n":
-        print("Your todo list is: ", todo_list)
-        break
-    elif answer == "Y" or answer == "y":
+    if answer == "Y" or answer == "y":
         item = input("Item > ")
         todo_list.append(item)
-        print("Your todo list is: ", todo_list)
+    elif answer == "N" or answer == "n":
+        print("Your todo list: ", todo_list)
+        print("Good luck completing it!")
+        break
     else:
         print("Invalid input")
     
